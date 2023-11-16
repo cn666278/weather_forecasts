@@ -96,3 +96,62 @@ body {
 .search-list li:hover {
     background-color: lightgray;
 }
+
+/* Current Weather */
+.weather-box {
+    display: flex;
+    padding-left: 50px;
+    align-items: flex-end;
+}
+
+.weather-box .tem-box {
+    margin-right: 42px;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-box .tem-box .temp span {
+    font-size: 90px;
+    display: inline-block;
+    height: 100px;
+    margin-bottom: 10px;
+    line-height: 100px;
+}
+
+.climate-box .air {
+    display: inline;
+    padding: 5px 10px;
+    height: 32px;
+    border-radius: 16px;
+    background: #65D45A;
+    text-align: center;
+    line-height: 32px;
+    font-family: PingFangSC-Medium;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+
+.climate-box .weather-list {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 21px;
+    margin-bottom: 28px;
+}
+
+.climate-box .weather-list li img {
+    width: 20px;
+    height: 20px;
+}
+
+.climate-box .weather-list li {
+    margin-right: 20px;
+}
+
+.climate-box .weather-list li,
+.climate-box .weather-list span {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}

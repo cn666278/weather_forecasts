@@ -20,20 +20,43 @@
                     <span class="dateLunar">十月初五</span>
                 </span>
             </div>
+            <!-- search bar & search list -->
+            <div class="search-box">
+                <div class="location">
+                    <img src="./imgs/定位.png" alt="">
+                    <span class="area">City Name</span>
+                </div>
+                <div class="search">
+                    <input type="text" class="search-city" placeholder="enter the city name">
+                    <ul class="search-list">
+                        <li class="city-item">Beijing</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <!-- search bar & search list -->
-        <div class="search-box">
-            <div class="location">
-              <img src="./imgs/定位.png" alt="">
-              <span class="area">City Name</span>
+        <!-- Current Weather -->
+        <div class="weather-box">
+            <div class="tem-box">
+                <span class="temp">
+                    <span class="temperature">12</span>
+                    <span>°</span>
+                </span>
             </div>
-            <div class="search">
-              <input type="text" class="search-city" placeholder="enter the city name">
-              <ul class="search-list">
-                <li class="city-item">Beijing</li>
-              </ul>
+            <div class="climate-box">
+                <div class="air">
+                    <span class="psPm25">55</span>
+                    <span class="psPm25Level">Good</span>
+                </div>
+                <ul class="weather-list">
+                    <li>
+                        <img src="./imgs/小雨-line.png" class="weatherImg" alt="">
+                        <span class="weather">Cloudy</span>
+                    </li>
+                    <li class="windDirection">Southeast Wind</li>
+                    <li class="windPower">Level 2</li>
+                </ul>
             </div>
-          </div>
+        </div>
     </div>
     <!-- Encapsulated myAxios function -->
     <script src="./js/my-axios.js"></script>
