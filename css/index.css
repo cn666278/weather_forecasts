@@ -155,3 +155,25 @@ body {
     align-items: center;
     font-size: 16px;
 }
+
+/* Today Weather */
+.today-weather {
+    display: flex;
+    padding-left: 50px;
+}
+
+.today-weather .range-box,
+.today-weather .range {
+    font-size: 16px;
+}
+
+.today-weather .sun-list {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.today-weather .sun-list li {
+    font-size: 16px;
+    margin-right: 42px;
+}
