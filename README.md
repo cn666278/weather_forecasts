@@ -1,2 +1,2 @@
 # weather_forecasts
-weather forecasts web page using HTML+CSS+JS+AXIOS(simple packaging with XMLHttpRequest+Promise)
+weather forecasts web page using HTML+CSS+JS+AXIOS(simple Encapsulated with XMLHttpRequest+Promise)
