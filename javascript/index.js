@@ -106,3 +106,28 @@ function getWeather(cityCode) {
 
 // 默认进入网页，显示北京市天气
 getWeather(110100)
+
+/**
+ * 目标2： 搜索城市列表
+ * 2.1 绑定input事件，获取关键字
+ * 2.2 根据关键字，获取城市列表数据
+ *  */
+
+// 2.1 绑定input事件，获取关键字
+document.querySelector('.search-city').addEventListener('input', (e) => {
+    console.log(e.target.value)
+    // 2.2 根据关键字，获取城市列表数据
+    myAxios({
+        url: 'http://hmajax.itheima.net/api/weather/city',
+        params: {
+            city: e.target.value
+        }
+    }).then(result =>{
+        console.log(result)
+        const listStr = result.data.map(item => {
+            return `<li class="city-item" data-code="${item.code}">${item.name}</li>`
+        }).join('') // 将数组转换为字符串
+        console.log(listStr)
+        document.querySelector('.search-list').innerHTML = listStr
+    })
+})
