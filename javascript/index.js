@@ -131,3 +131,21 @@ document.querySelector('.search-city').addEventListener('input', (e) => {
         document.querySelector('.search-list').innerHTML = listStr
     })
 })
+/**
+ * 目标3： 切换城市天气
+ * 3.1 绑定城市点击事件，获取城市code
+ * 3.2 根据城市code，获取城市天气数据
+ */
+
+// 3.1 绑定城市点击事件，获取城市code
+document.querySelector('.search-list').addEventListener('click', e => {
+    if(e.target.classList.contains('city-item')){
+        // 只有点击城市列表项<li>才会触发
+        const cityCode = e.target.dataset.code
+        console.log(cityCode)
+        // 3.2 根据城市code，获取城市天气数据
+        getWeather(cityCode)
+    }
+})
+
+
