@@ -75,7 +75,31 @@ function getWeather(cityCode) {
             <span class="sunsetTime">${twObj.sunsetTime}</span>
         </li>
     </ul>`
-    document.querySelector('.today-weather').innerHTML = todayWeatherStr
+        document.querySelector('.today-weather').innerHTML = todayWeatherStr
+
+        // 未来7日天气预报展示
+        const dayForecast = wObj.dayForecast
+        const dayForecastStr = dayForecast.map(item => {
+            return `<li class="item">
+            <div class="date-box">
+                <span class="dateFormat">${item.dateFormat}</span>
+                <span class="date">${item.date}</span>
+            </div>
+            <img src="${item.weatherImg}" alt="" class="weatherImg">
+            <span class="weather">${item.weather}</span>
+            <div class="temp">
+                <span class="temNight">${item.temNight}</span>-
+                <span class="temDay">${item.temDay}</span>
+                <span>℃</span>
+            </div>
+            <div class="wind">
+                <span class="windDirection">${item.windDirection}</span>
+                <span class="windPower">${item.windPower}</span>
+            </div>
+        </li>`
+        }).join('')
+        // console.log(dayForecastStr)
+        document.querySelector('.week-wrap').innerHTML = dayForecastStr
 
     })
 }
