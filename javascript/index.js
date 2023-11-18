@@ -45,6 +45,37 @@ function getWeather(cityCode) {
         </ul>
     </div>`
         document.querySelector('.weather-box').innerHTML = tempStr
+        // 当天天气
+        const twObj = wObj.todayWeather // today weather object
+        const todayWeatherStr = ` <div class="range-box">
+        <span>Today:</span>
+        <span class="range">
+            <span class="weather">${twObj.weather}</span>
+            <span class="temNight">${twObj.temNight}</span>
+            <span>-</span>
+            <span class="temDay">${twObj.temDay}</span>
+            <span>℃</span>
+        </span>
+    </div>
+    <ul class="sun-list">
+        <li>
+            <span>UV Index</span>
+            <span class="ultraviolet">${twObj.ultraviolet}</span>
+        </li>
+        <li>
+            <span>Humidity</span>
+            <span class="humidity">${twObj.humidity}</span>%
+        </li>
+        <li>
+            <span>Sunrise</span>
+            <span class="sunriseTime">${twObj.sunriseTime}</span>
+        </li>
+        <li>
+            <span>Sunset</span>
+            <span class="sunsetTime">${twObj.sunsetTime}</span>
+        </li>
+    </ul>`
+    document.querySelector('.today-weather').innerHTML = todayWeatherStr
 
     })
 }
