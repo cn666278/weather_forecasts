@@ -17,7 +17,7 @@ function getWeather(cityCode) {
         // 1.2 数据展示到页面
         // 阳历和农历日期
         const dateStr = `<span class="dateShort">${wObj.date}</span>
-        <span class="calendar">Lunar Calendar&nbsp;
+        <span class="calendar">农历&nbsp;
             <span class="dateLunar">${wObj.dateLunar}</span>
         </span>`
         document.querySelector('.title').innerHTML = dateStr
@@ -59,18 +59,22 @@ function getWeather(cityCode) {
     </div>
     <ul class="sun-list">
         <li>
+            <img src="./imgs/紫外线.png" alt="">
             <span>UV Index</span>
             <span class="ultraviolet">${twObj.ultraviolet}</span>
         </li>
         <li>
+            <img src="./imgs/空气湿度.png" alt="">
             <span>Humidity</span>
             <span class="humidity">${twObj.humidity}</span>%
         </li>
         <li>
+            <img src="./imgs/日出.png" alt="">
             <span>Sunrise</span>
             <span class="sunriseTime">${twObj.sunriseTime}</span>
         </li>
         <li>
+            <img src="./imgs/日落.png" alt="">
             <span>Sunset</span>
             <span class="sunsetTime">${twObj.sunsetTime}</span>
         </li>
@@ -122,7 +126,7 @@ document.querySelector('.search-city').addEventListener('input', (e) => {
         params: {
             city: e.target.value
         }
-    }).then(result =>{
+    }).then(result => {
         console.log(result)
         const listStr = result.data.map(item => {
             return `<li class="city-item" data-code="${item.code}">${item.name}</li>`
@@ -139,7 +143,7 @@ document.querySelector('.search-city').addEventListener('input', (e) => {
 
 // 3.1 绑定城市点击事件，获取城市code
 document.querySelector('.search-list').addEventListener('click', e => {
-    if(e.target.classList.contains('city-item')){
+    if (e.target.classList.contains('city-item')) {
         // 只有点击城市列表项<li>才会触发
         const cityCode = e.target.dataset.code
         console.log(cityCode)
