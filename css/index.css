@@ -16,7 +16,7 @@ body {
 /* top */
 .top-box {
     display: flex;
-    padding: 50px;
+    padding: 80px;
     justify-content: space-between;
 }
 
@@ -100,7 +100,7 @@ body {
 /* Current Weather */
 .weather-box {
     display: flex;
-    padding-left: 50px;
+    padding-left: 80px;
     align-items: flex-end;
 }
 
@@ -159,7 +159,7 @@ body {
 /* Today Weather */
 .today-weather {
     display: flex;
-    padding-left: 50px;
+    padding-left: 80px;
 }
 
 .today-weather .range-box,
