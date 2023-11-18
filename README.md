@@ -3,7 +3,7 @@ A weather forecasts web page using `HTML+CSS+JS+AXIOS`(simple Encapsulated with 
 
 You can switch the weather forecast by searching and selecting the corresponding city in the search bar in the upper right corner (currently only supports cities in China).  
 
-<img src="imgs/screenshot.png" style="width: 80%;">
+<img src="imgs/screenshot.png">
 
 ## Supporting functions:  
 
